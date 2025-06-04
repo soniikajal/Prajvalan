@@ -23,7 +23,7 @@ Prajvalan is a comprehensive platform designed to ignite student innovation by t
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/prajvalan.git
+git clone https://github.com/soniikajal/Prajvalan.git
 ```
 
 2. Navigate to the project directory:
