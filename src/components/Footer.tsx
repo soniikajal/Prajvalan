@@ -11,9 +11,11 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-prajvalan-navy to-prajvalan-orange rounded-lg flex items-center justify-center">
-                <span className="text-white font-heading font-bold text-sm">P</span>
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="Prajvalan Logo" 
+                className="w-8 h-8 object-contain"
+              />
               <span className="text-xl font-heading font-bold text-foreground">Prajvalan</span>
             </Link>
             <p className="text-muted-foreground mb-4 leading-relaxed">
