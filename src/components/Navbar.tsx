@@ -22,9 +22,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-prajvalan-navy to-prajvalan-orange rounded-lg flex items-center justify-center">
-              <span className="text-white font-heading font-bold text-sm">P</span>
-            </div>
+            <img 
+              src="/logo.png" 
+              alt="Prajvalan Logo" 
+              className="w-8 h-8 object-contain"
+            />
             <span className="text-xl font-heading font-bold text-foreground">Prajvalan</span>
           </Link>
 
