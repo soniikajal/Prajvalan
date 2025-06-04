@@ -1,0 +1,169 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 217.2 32.6% 17.5%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217.2 32.6% 17.5%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 17 100% 58%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 17 100% 58%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 222.2 84% 4.9%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 17 100% 58%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 215 27.9% 16.9%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 27.9% 16.9%;
+    --sidebar-ring: 17 100% 58%;
+
+    /* Prajvalan Custom Colors */
+    --prajvalan-navy: 215 45% 25%;
+    --prajvalan-dark-navy: 215 30% 15%;
+    --prajvalan-gray: 0 0% 34%;
+    --prajvalan-dark-gray: 0 0% 15%;
+    --prajvalan-orange: 17 100% 58%;
+    --prajvalan-light-orange: 22 100% 62%;
+    --prajvalan-bright-orange: 15 100% 55%;
+    --prajvalan-dark-orange: 15 100% 50%;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 17 100% 58%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 17 100% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Lato', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-display-italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-gpu {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Custom Prajvalan colors */
+@layer utilities {
+  .bg-prajvalan-navy { background-color: hsl(var(--prajvalan-navy)); }
+  .bg-prajvalan-dark-navy { background-color: hsl(var(--prajvalan-dark-navy)); }
+  .bg-prajvalan-gray { background-color: hsl(var(--prajvalan-gray)); }
+  .bg-prajvalan-dark-gray { background-color: hsl(var(--prajvalan-dark-gray)); }
+  .bg-prajvalan-orange { background-color: hsl(var(--prajvalan-orange)); }
+  .bg-prajvalan-light-orange { background-color: hsl(var(--prajvalan-light-orange)); }
+  .bg-prajvalan-bright-orange { background-color: hsl(var(--prajvalan-bright-orange)); }
+  .bg-prajvalan-dark-orange { background-color: hsl(var(--prajvalan-dark-orange)); }
+  
+  .text-prajvalan-navy { color: hsl(var(--prajvalan-navy)); }
+  .text-prajvalan-dark-navy { color: hsl(var(--prajvalan-dark-navy)); }
+  .text-prajvalan-gray { color: hsl(var(--prajvalan-gray)); }
+  .text-prajvalan-dark-gray { color: hsl(var(--prajvalan-dark-gray)); }
+  .text-prajvalan-orange { color: hsl(var(--prajvalan-orange)); }
+  .text-prajvalan-light-orange { color: hsl(var(--prajvalan-light-orange)); }
+  .text-prajvalan-bright-orange { color: hsl(var(--prajvalan-bright-orange)); }
+  .text-prajvalan-dark-orange { color: hsl(var(--prajvalan-dark-orange)); }
+  
+  .border-prajvalan-navy { border-color: hsl(var(--prajvalan-navy)); }
+  .border-prajvalan-dark-navy { border-color: hsl(var(--prajvalan-dark-navy)); }
+  .border-prajvalan-gray { border-color: hsl(var(--prajvalan-gray)); }
+  .border-prajvalan-dark-gray { border-color: hsl(var(--prajvalan-dark-gray)); }
+  .border-prajvalan-orange { border-color: hsl(var(--prajvalan-orange)); }
+  .border-prajvalan-light-orange { border-color: hsl(var(--prajvalan-light-orange)); }
+  .border-prajvalan-bright-orange { border-color: hsl(var(--prajvalan-bright-orange)); }
+  .border-prajvalan-dark-orange { border-color: hsl(var(--prajvalan-dark-orange)); }
+
+  /* 3D Animation utilities */
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .translateZ-4 {
+    transform: translateZ(4px);
+  }
+}
