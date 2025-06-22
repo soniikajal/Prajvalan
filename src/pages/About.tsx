@@ -1,17 +1,25 @@
 
 import React from 'react';
-import { Target, Users, Lightbulb, Award } from 'lucide-react';
+import {
+  Lightbulb,
+  FlaskConical,      // for 'Learning by Doing'
+  Users,              // for 'Community First'
+  Award,             // for 'Purpose > Perfection'
+  ShieldCheck,        // for 'Integrity in Action'
+  Volume2,            // for 'Impact over Noise'
+} from 'lucide-react';
+
 
 const About = () => {
   const team = [
     {
-      name: 'Dr. Rajesh Kumar',
-      role: 'Director & Founder',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
+      name: 'Aastha Pandey',
+      role: 'CEO & Founder',
+      image: 'https://images.unsplash.com/photo-1502764612704-e9c8a7b2f1d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
       description: 'Former startup founder with 15+ years in innovation and student mentorship.'
     },
     {
-      name: 'Priya Sharma',
+      name: 'Ruhansh Bansal',
       role: 'Program Manager',
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b750?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
       description: 'MBA from IIM, specializes in startup operations and funding strategies.'
@@ -73,23 +81,33 @@ const About = () => {
   const values = [
     {
       icon: Lightbulb,
-      title: 'Innovation First',
-      description: 'We believe every student has the potential to create groundbreaking solutions.'
+      title: 'Innovation over Limitation',
+      description: "We don’t follow blueprints; we create them. Original ideas and unconventional thinking are our foundation."
+    },
+    {
+      icon: FlaskConical,
+      title: 'Learning by Doing',
+      description: 'Experience teaches more than theory ever will. We encourage experimentation, prototyping, and building real-world solutions.'
     },
     {
       icon: Users,
-      title: 'Community Driven',
-      description: 'Building a supportive ecosystem where collaboration trumps competition.'
-    },
-    {
-      icon: Target,
-      title: 'Impact Focused',
-      description: 'Measuring success not just in profits, but in positive social change.'
+      title: 'Community First',
+      description: 'Prajvalan is not a solo journey. We rise by lifting others, collaborating, and sharing knowledge.'
     },
     {
       icon: Award,
-      title: 'Excellence',
-      description: 'Maintaining the highest standards in mentorship and support quality.'
+      title: 'Purpose > Perfection',
+      description: 'We value intent and impact over flawless execution. It’s okay to be messy if you’re building something meaningful.'
+    },
+    {
+      icon: ShieldCheck,
+      title: 'Integrity in Action',
+      description: ' We build with honesty, own our failures, and grow through transparency and trust.'
+    },
+    {
+      icon: Volume2,
+      title: 'Impact over Noise',
+      description: 'We’re not here for likes—we’re here for legacy. Our focus is on solving real problems and creating measurable change.'
     }
   ];
 
@@ -107,8 +125,7 @@ const About = () => {
           <div className="text-center mb-16">
             <h1 className="text-5xl font-heading font-bold text-foreground mb-6">About Prajvalan</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Igniting the entrepreneurial spirit in students across India through mentorship, 
-              funding guidance, and a supportive community ecosystem.
+              Igniting the entrepreneurial spirit in students across India
             </p>
           </div>
 
@@ -119,14 +136,42 @@ const About = () => {
               <div className="relative z-10">
                 <h2 className="text-3xl font-heading font-bold text-foreground mb-6">Our Story</h2>
                 <p className="text-muted-foreground leading-relaxed text-lg mb-6">
-                  Prajvalan was born from a simple observation: students have incredible ideas, but often lack 
-                  the guidance and resources to turn them into reality. Founded in 2020 by a group of educators 
-                  and entrepreneurs, we set out to bridge this gap.
+                  Prajvalan didn’t begin as a company. It began as a question.<br />
+                  “Why is it so hard for someone with an idea to actually build something?”
+                </p>
+                
+                <p className="text-muted-foreground leading-relaxed text-lg mb-6">
+                  Back in school, I had more ideas than notebooks could hold. But what I didn’t have was direction—
+                  no mentors, no teammates, no clue how to take even the first step toward building something real. 
+                  I scoured the internet, joined forums, looked at platforms, but everything seemed built for people 
+                  who already knew the game. 
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-lg mb-6">
+                  Not for beginners. <br />
+                  Not for students.
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-lg mb-6">
+                  Years later in college, I realized something that both comforted and disturbed me: I wasn’t the only one.
+                  I met more people just like me—students with passion, with potential, but no path. Everyone seemed 
+                  stuck in the same loop of doubts, lack of access, and no guidance. That’s when it clicked.
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-lg mb-6">
+                  We decided we couldn’t keep waiting for the system to catch up.<br />
+                  “If this problem was ours, the solution had to be ours too.”
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-lg mb-6">
+                  And that’s how Prajvalan was born—not as a startup, but as a spark. 
+                  A spark to ignite belief in young people who want to build, solve, and dream. 
+                  A spark to challenge the conventional journey of school → college → job → retirement.
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-lg mb-6">
+                  We built this space for those who ask “Why not me?”<br />
+                  For those who have the courage to chase their ‘what ifs’.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  What started as a small initiative in one city has grown into a national movement, 
-                  empowering thousands of students to become confident entrepreneurs and innovators.
-                </p>
+                  Today, Prajvalan is a growing community that helps student-led startups not only survive, but thrive. 
+                  We’re already incubating multiple startups and mentoring early-stage projects with one goal: 
+                  to empower young minds to create lasting impact, no matter where they start from.</p>
               </div>
             </div>
           </div>
