@@ -15,7 +15,7 @@ const About = () => {
     {
       name: 'Aastha Pandey',
       role: 'CEO & Founder',
-      image: 'https://images.unsplash.com/photo-1502764612704-e9c8a7b2f1d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
+      image: '/images/AasthaPandey.png',
       description: 'Former startup founder with 15+ years in innovation and student mentorship.'
     },
     {
@@ -204,7 +204,7 @@ const About = () => {
           {/* Values */}
           <div className="mb-20">
             <h2 className="text-3xl font-heading font-bold text-foreground text-center mb-12">Our Values</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {values.map((value, index) => (
                 <div 
                   key={index} 

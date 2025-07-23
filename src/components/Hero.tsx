@@ -71,13 +71,17 @@ const Hero = () => {
           Where student ideas transform into thriving startups through mentorship, funding, and community support
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in opacity-0 animation-delay-400" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
+          < a href="/Startups" className="inline-block">
           <button className="group bg-gradient-to-r from-prajvalan-orange to-prajvalan-bright-orange text-white px-8 py-4 rounded-full font-medium text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:rotate-1 flex items-center perspective-1000">
             <span className="transform group-hover:translateZ-4">Explore Opportunities</span>
             <ArrowRight className="ml-2 group-hover:translate-x-1 group-hover:translateZ-4 transition-transform" size={20} />
           </button>
+          </a>
+          <a href="https://chat.whatsapp.com/LIHXPUSBEfuH7tSKEWnYZk" target="_blank" rel="noopener noreferrer" className="inline-block">
           <button className="border-2 border-prajvalan-orange text-prajvalan-orange px-8 py-4 rounded-full font-medium text-lg hover:bg-prajvalan-orange hover:text-white transition-all duration-300 transform hover:scale-105 hover:-rotate-1 hover:shadow-lg hover:shadow-prajvalan-orange/20">
             Join the Movement
           </button>
+          </a>
         </div>
       </div>
 

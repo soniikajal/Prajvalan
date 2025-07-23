@@ -8,27 +8,27 @@ const SuccessStories = () => {
   const stories = [
     {
       id: 1,
-      name: 'Ananya Gupta',
-      startup: 'GreenTech Solutions',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b750?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
-      quote: 'Prajvalan didn\'t just provide funding guidance - they gave me a family of mentors who believed in my vision when no one else did.',
-      achievement: 'Raised ₹2.5 Cr in Series A'
+      name: 'Aastha Pandey',
+      startup: 'Trikavach',
+      image: '/images/AasthaPandey.png',
+      quote: 'The difficulties we perceive often exist only in our imagination.',
+      achievement: 'Raised ₹15k+ for Trikavach , a self defense product line'
     },
     {
       id: 2,
-      name: 'Vikram Malhotra',
-      startup: 'EdTech Innovations',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
-      quote: 'The networking opportunities at Prajvalan connected me with my co-founder and our first major client. Game-changing!',
-      achievement: 'Serving 50,000+ students'
+      name: 'Kajal Soni',
+      startup: 'NSUT Orbit',
+      image: '/images/KajalSoni.jpg',
+      quote: 'The fear of failure is often greater than the failure itself.',
+      achievement: 'Making college feel less overwhelming for freshers.'
     },
     {
       id: 3,
-      name: 'Shreya Patel',
-      startup: 'HealthFirst',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
-      quote: 'From a college dorm room idea to impacting rural healthcare - Prajvalan made the impossible feel achievable.',
-      achievement: 'Impact across 200+ villages'
+      name: 'Durgesh Bansal',
+      startup: 'Unimart',
+      image: '/images/DurgeshBansal.jpg',
+      quote: 'Giving up is the only sure way to fail.',
+      achievement: 'College Marketplace for Buying, Selling, and Renting'
     }
   ];
 
@@ -68,11 +68,11 @@ const SuccessStories = () => {
                 "{story.quote}"
               </p>
               <div className="flex items-center space-x-4">
-                <div className="relative overflow-hidden rounded-full">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-prajvalan-orange group-hover:scale-110 transition-transform duration-300">
                   <img
                     src={story.image}
                     alt={story.name}
-                    className="w-12 h-12 rounded-full object-cover border-2 border-prajvalan-orange group-hover:scale-110 transition-transform duration-300"
+                    className="object-cover w-full h-full rounded-full"
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-prajvalan-orange/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>

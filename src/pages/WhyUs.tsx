@@ -174,9 +174,17 @@ const WhyUs = () => {
                 <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
                   Join thousands of students who have transformed their ideas into successful ventures with Prajvalan's support.
                 </p>
-                <button className="bg-gradient-to-r from-prajvalan-orange to-prajvalan-bright-orange text-white px-8 py-4 rounded-xl font-medium text-lg hover:shadow-xl hover:scale-105 transition-all duration-300 transform hover:-translate-y-1">
-                  Join Prajvalan Today
-                </button>
+<a
+  href="https://chat.whatsapp.com/LIHXPUSBEfuH7tSKEWnYZk"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block"
+>
+  <button className="bg-gradient-to-r from-prajvalan-orange to-prajvalan-bright-orange text-white px-8 py-4 rounded-xl font-medium text-lg hover:shadow-xl hover:scale-105 transition-all duration-300 transform hover:-translate-y-1">
+    Join Prajvalan Today
+  </button>
+</a>
+
               </div>
             </div>
           </div>

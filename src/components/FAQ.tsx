@@ -82,9 +82,8 @@ const FAQ = () => {
                   )}
                 </div>
               </button>
-              
               {openIndex === index && (
-                <div className="px-6 pb-4 pt-0 animate-fade-in">
+                <div className="px-6 pb-4 pt-0">
                   <div className="border-t border-prajvalan-orange/20 pt-4">
                     <p className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300">
                       {faq.answer}
@@ -101,10 +100,12 @@ const FAQ = () => {
 
         <div className="text-center mt-12 transform hover:scale-105 transition-transform duration-300">
           <p className="text-muted-foreground mb-4">Still have questions?</p>
+          <a href="https://chat.whatsapp.com/LIHXPUSBEfuH7tSKEWnYZk" target="_blank" rel="noopener noreferrer" className="inline-block">
           <button className="bg-gradient-to-r from-prajvalan-navy to-prajvalan-orange text-white px-8 py-3 rounded-full font-medium hover:shadow-xl hover:scale-110 transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden group">
             <span className="relative z-10">Contact Us</span>
             <div className="absolute inset-0 bg-gradient-to-r from-prajvalan-orange to-prajvalan-bright-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
+          </a>
         </div>
       </div>
     </section>
