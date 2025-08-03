@@ -69,7 +69,7 @@ const About = () => {
     {
       year: '2025 April',
       title: 'The Great Push',
-      description: 'Reached 500+ startups with ₹50+ crores in total funding facilitated.'
+      description: 'Gained some funding and started incubating our first student-led startups.'
     },
     {
       year: '2025 Present',
