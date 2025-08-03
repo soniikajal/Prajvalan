@@ -11,7 +11,7 @@ import {
 
 
 const About = () => {
-  const team = [
+  {/*const team = [
     {
       name: 'Aastha Pandey',
       role: 'CEO & Founder',
@@ -48,33 +48,33 @@ const About = () => {
       image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80',
       description: 'Recent graduate who bridges the gap between students and mentors.'
     }
-  ];
+  ];*/}
 
   const timeline = [
     {
-      year: '2020',
+      year: '2024 August',
       title: 'The Beginning',
-      description: 'Prajvalan was founded with a vision to ignite student innovation across India.'
+      description: 'The birth of Prajvalan as a community initiative to empower student entrepreneurs.'
     },
     {
-      year: '2021',
-      title: 'First Cohort',
-      description: 'Launched with 25 student startups, establishing our core mentorship model.'
+      year: '2025 January',
+      title: 'First Steps',
+      description: 'Assembled a passionate team of people who had a similar vision.'
     },
     {
-      year: '2022',
-      title: 'Scaling Up',
-      description: 'Expanded to 5 cities and partnered with major government funding initiatives.'
+      year: '2025 February',
+      title: 'Building the Foundation',
+      description: 'Proper sociel media presence, website launch, and initial outreach to students.'
     },
     {
-      year: '2023',
-      title: 'Major Milestone',
+      year: '2025 April',
+      title: 'The Great Push',
       description: 'Reached 500+ startups with ₹50+ crores in total funding facilitated.'
     },
     {
-      year: '2024',
-      title: 'National Impact',
-      description: 'Established presence in 15+ cities with international partnership programs.'
+      year: '2025 Present',
+      title: 'A bright Future',
+      description: 'Prajvalan has taken root and is growing with radiant momentum.'
     }
   ];
 
@@ -225,7 +225,7 @@ const About = () => {
           </div>
 
           {/* Team */}
-          <div>
+          {/*<div>
             <h2 className="text-3xl font-heading font-bold text-foreground text-center mb-12">Meet Our Team</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {team.map((member, index) => (
@@ -253,6 +253,7 @@ const About = () => {
               ))}
             </div>
           </div>
+        </div>*/}
         </div>
       </section>
     </div>
