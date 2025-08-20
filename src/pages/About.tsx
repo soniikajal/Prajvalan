@@ -50,33 +50,7 @@ const About = () => {
     }
   ];*/}
 
-  const timeline = [
-    {
-      year: '2024 August',
-      title: 'The Beginning',
-      description: 'The birth of Prajvalan as a community initiative to empower student entrepreneurs.'
-    },
-    {
-      year: '2025 January',
-      title: 'First Steps',
-      description: 'Assembled a passionate team of people who had a similar vision.'
-    },
-    {
-      year: '2025 February',
-      title: 'Building the Foundation',
-      description: 'Proper sociel media presence, website launch, and initial outreach to students.'
-    },
-    {
-      year: '2025 April',
-      title: 'The Great Push',
-      description: 'Gained some funding and started incubating our first student-led startups.'
-    },
-    {
-      year: '2025 Present',
-      title: 'A bright Future',
-      description: 'Prajvalan has taken root and is growing with radiant momentum.'
-    }
-  ];
+  
 
   const values = [
     {
@@ -176,30 +150,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* Timeline */}
-          <div className="mb-20">
-            <h2 className="text-3xl font-heading font-bold text-foreground text-center mb-12">Our Journey</h2>
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-prajvalan-orange to-prajvalan-bright-orange"></div>
-              
-              <div className="space-y-12">
-                {timeline.map((item, index) => (
-                  <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                    <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                      <div className="bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-border hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                        <div className="text-2xl font-bold text-prajvalan-orange mb-2">{item.year}</div>
-                        <h3 className="text-xl font-heading font-semibold text-foreground mb-2">{item.title}</h3>
-                        <p className="text-muted-foreground">{item.description}</p>
-                      </div>
-                    </div>
-                    <div className="w-8 h-8 bg-prajvalan-orange rounded-full border-4 border-background flex-shrink-0 z-10"></div>
-                    <div className="w-1/2"></div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+         
 
           {/* Values */}
           <div className="mb-20">

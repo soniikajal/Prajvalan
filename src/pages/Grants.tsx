@@ -1,105 +1,278 @@
 
 import React, { useState } from 'react';
-import { Search, Filter, ExternalLink, Calendar, DollarSign, Users } from 'lucide-react';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Search, ExternalLink, Calendar, DollarSign, Users } from 'lucide-react';
 
 const Grants = () => {
-  const [selectedType, setSelectedType] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedGrant, setSelectedGrant] = useState(null);
 
   const grants = [
     {
       id: 1,
-      name: 'BIRAC SPARSH',
+      name: 'Startup India Seed Fund (SISFS)',
       type: 'Government',
-      amount: '₹50 Lakhs',
-      deadline: '2024-03-15',
-      logo: '🧬',
-      description: 'Support for student innovators in biotechnology and healthcare.',
-      eligibility: 'Final year students or recent graduates with biotech innovations',
-      process: 'Online application → Pitching → Due diligence → Funding',
-      website: 'https://birac.nic.in',
+      amount: 'Up to ₹20 Lakhs',
+      deadline: 'Rolling basis',
+      logo: '🚀',
+      description: 'Grants for idea validation and product development',
+      eligibility: 'Early-stage startups incorporated within 2 years',
+      process: 'Online application → Incubator selection → Validation → Funding',
+      website: 'https://lnkd.in/dTGGTN4s',
       status: 'Open'
     },
     {
       id: 2,
-      name: 'Startup India Seed Fund',
+      name: 'Genesis',
       type: 'Government',
-      amount: '₹20 Lakhs',
-      deadline: '2024-04-20',
-      logo: '🚀',
-      description: 'Government initiative to support early-stage startups with funding.',
-      eligibility: 'Startups incorporated within 2 years with innovative ideas',
-      process: 'Application → Incubator selection → Validation → Funding',
-      website: 'https://startupindia.gov.in',
+      amount: 'Up to ₹10 Lakhs',
+      deadline: 'Rolling basis',
+      logo: '🌱',
+      description: 'Incubation support for innovative startups',
+      eligibility: 'Student entrepreneurs and early-stage startups',
+      process: 'Application → Screening → Incubation → Funding',
+      website: 'https://lnkd.in/dBtUHfCi',
       status: 'Open'
     },
     {
       id: 3,
-      name: 'Sequoia Surge',
-      type: 'Private',
-      amount: '₹1-3 Crores',
-      deadline: '2024-02-28',
-      logo: '🌲',
-      description: 'Rapid scale-up program for early-stage startups in Southeast Asia.',
-      eligibility: 'Early-stage startups with strong founding teams',
-      process: 'Application → Interview → Investment committee → Funding',
-      website: 'https://surge.sequoiacap.com',
-      status: 'Closing Soon'
+      name: 'MSME Innovative Scheme',
+      type: 'Government',
+      amount: 'Up to ₹15 Lakhs',
+      deadline: 'Quarterly',
+      logo: '🏭',
+      description: 'Up to ₹15L for innovative MSME projects',
+      eligibility: 'Micro, Small & Medium Enterprises with innovative projects',
+      process: 'Online application → Technical evaluation → Approval → Disbursement',
+      website: 'https://msme.gov.in',
+      status: 'Open'
     },
     {
       id: 4,
-      name: 'Accel Atoms',
-      type: 'Private',
-      amount: '₹50 Lakhs - ₹2 Crores',
-      deadline: '2024-05-10',
-      logo: '⚡',
-      description: 'Early-stage venture capital for technology startups.',
-      eligibility: 'Tech startups with product-market fit potential',
-      process: 'Pitch deck → Partner meeting → Due diligence → Term sheet',
-      website: 'https://accel.com',
+      name: 'Biotechnology Ignition Grant (BIG)',
+      type: 'Government',
+      amount: 'Up to ₹50 Lakhs',
+      deadline: 'Bi-annual',
+      logo: '🧬',
+      description: 'Up to ₹50L for biotech startups',
+      eligibility: 'Biotech startups and entrepreneurs',
+      process: 'Proposal submission → Expert review → Presentation → Funding',
+      website: 'https://birac.nic.in',
       status: 'Open'
     },
     {
       id: 5,
-      name: 'SIDBI Fund of Funds',
+      name: 'Digital India Bhashini Initiative',
       type: 'Government',
-      amount: '₹10 Lakhs - ₹1 Crore',
-      deadline: '2024-06-30',
-      logo: '🏦',
-      description: 'Government fund supporting startups through registered incubators.',
-      eligibility: 'Startups registered with recognized incubators',
-      process: 'Incubator nomination → Application → Review → Disbursement',
-      website: 'https://sidbi.in',
+      amount: 'Variable',
+      deadline: 'Rolling basis',
+      logo: '🇮🇳',
+      description: 'Grants for Indian language-based tech/AI innovations',
+      eligibility: 'Startups working on Indian language technologies',
+      process: 'Application → Technical review → Demo → Grant award',
+      website: 'https://bhashini.gov.in',
       status: 'Open'
     },
     {
       id: 6,
-      name: 'Blume Ventures',
-      type: 'Private',
-      amount: '₹25 Lakhs - ₹5 Crores',
-      deadline: '2024-03-31',
-      logo: '🌸',
-      description: 'Early-stage VC fund focusing on consumer and B2B startups.',
-      eligibility: 'Early-stage startups with innovative business models',
-      process: 'Cold pitch → Screening → Partner review → Investment decision',
-      website: 'https://blume.vc',
+      name: 'NIDHI-PRAYAS',
+      type: 'Government',
+      amount: '₹10 Lakhs',
+      deadline: 'Multiple cycles',
+      logo: '�',
+      description: '₹10L prototyping grant',
+      eligibility: 'Students, faculty, and researchers with innovative ideas',
+      process: 'Idea submission → Evaluation → Prototyping support → Funding',
+      website: 'https://nidhi.dst.gov.in',
       status: 'Open'
     },
-  ];
-
-  const types = [
-    { id: 'all', name: 'All Grants' },
-    { id: 'Government', name: 'Government' },
-    { id: 'Private', name: 'Private' },
+    {
+      id: 7,
+      name: 'Multiplier Grants Scheme (MGS)',
+      type: 'Government',
+      amount: 'Industry matching',
+      deadline: 'Annual',
+      logo: '🤝',
+      description: 'Govt matches industry R&D funding',
+      eligibility: 'Companies with industry R&D partnerships',
+      process: 'Industry partnership → Grant application → Government matching → Project execution',
+      website: 'https://lnkd.in/dW5tMTuf',
+      status: 'Open'
+    },
+    {
+      id: 8,
+      name: 'Rashtriya Krishi Vikas Yojana (RAFTAAR)',
+      type: 'Government',
+      amount: 'Variable',
+      deadline: 'Annual',
+      logo: '🌾',
+      description: 'Grants for agri-tech startups',
+      eligibility: 'Agricultural technology startups and entrepreneurs',
+      process: 'Project proposal → State approval → Central clearance → Implementation',
+      website: 'https://rkvv.da.gov.in',
+      status: 'Open'
+    },
+    {
+      id: 9,
+      name: 'Smart India Hackathon (SIH)',
+      type: 'Government',
+      amount: '₹1 Lakh',
+      deadline: 'Annual',
+      logo: '💡',
+      description: 'Innovation grants for students and professional teams',
+      eligibility: 'Student teams and working professionals',
+      process: 'Problem selection → Solution development → Grand finale → Award',
+      website: 'https://sih.gov.in',
+      status: 'Open'
+    },
+    {
+      id: 10,
+      name: 'TIDE 2.0 Scheme',
+      type: 'Government',
+      amount: 'Up to ₹4 Crores',
+      deadline: 'Rolling basis',
+      logo: '💻',
+      description: 'ICT-focused startup support via MeitY incubators',
+      eligibility: 'ICT startups through recognized incubators',
+      process: 'Incubator application → Startup selection → Support → Funding',
+      website: 'https://lnkd.in/dU7kZnD6',
+      status: 'Open'
+    },
+    {
+      id: 11,
+      name: 'Credit Guarantee Fund (CGTMSE)',
+      type: 'Government',
+      amount: 'Up to ₹2 Crores',
+      deadline: 'Rolling basis',
+      logo: '🏦',
+      description: 'Collateral-free loans up to ₹2Cr for MSMEs',
+      eligibility: 'Micro, Small & Medium Enterprises',
+      process: 'Bank application → CGTMSE guarantee → Loan approval → Disbursement',
+      website: 'https://cgtmse.in',
+      status: 'Open'
+    },
+    {
+      id: 12,
+      name: 'iDEX',
+      type: 'Government',
+      amount: 'Up to ₹1.5 Crores',
+      deadline: 'Quarterly',
+      logo: '🛡️',
+      description: 'Grants for defense and aerospace tech startups',
+      eligibility: 'Defense and aerospace technology startups',
+      process: 'Challenge participation → Prototype development → Testing → Production support',
+      website: 'https://idex.gov.in',
+      status: 'Open'
+    },
+    {
+      id: 13,
+      name: 'STPI Grant',
+      type: 'Government',
+      amount: 'Variable',
+      deadline: 'Rolling basis',
+      logo: '🖥️',
+      description: 'Incubation and funding for IT & ESDM startups',
+      eligibility: 'IT and Electronics startups',
+      process: 'Application → Incubation → Mentoring → Funding support',
+      website: 'https://stpi.in',
+      status: 'Open'
+    },
+    {
+      id: 14,
+      name: 'SAMRIDH Scheme',
+      type: 'Government',
+      amount: 'Up to ₹40 Lakhs',
+      deadline: 'Bi-annual',
+      logo: '📈',
+      description: 'Up to ₹40L for product development and scaling',
+      eligibility: 'Startups with proven products ready for scaling',
+      process: 'Application → Due diligence → Investment committee → Funding',
+      website: 'https://lnkd.in/d8auAcGw',
+      status: 'Open'
+    },
+    {
+      id: 15,
+      name: 'SIP-EIT',
+      type: 'Government',
+      amount: 'Patent support',
+      deadline: 'Rolling basis',
+      logo: '📋',
+      description: 'Patent filing support for electronics & IT startups',
+      eligibility: 'Electronics and IT startups with patentable innovations',
+      process: 'Patent application → Technical review → Filing support → Grant',
+      website: 'https://lnkd.in/dW5tMTuf',
+      status: 'Open'
+    },
+    {
+      id: 16,
+      name: 'ASPIRE Scheme',
+      type: 'Government',
+      amount: 'Variable',
+      deadline: 'Annual',
+      logo: '🌄',
+      description: 'Promotes rural innovation & livelihood-based entrepreneurship',
+      eligibility: 'Rural entrepreneurs and livelihood-based startups',
+      process: 'State proposal → Central approval → Implementation → Monitoring',
+      website: 'https://aspire.msme.gov.in',
+      status: 'Open'
+    },
+    {
+      id: 17,
+      name: 'CLCSS',
+      type: 'Government',
+      amount: '15% subsidy',
+      deadline: 'Annual',
+      logo: '⚙️',
+      description: '15% capital subsidy for tech upgradation for MSMEs',
+      eligibility: 'MSMEs seeking technology upgradation',
+      process: 'Technology selection → Subsidy application → Approval → Implementation',
+      website: 'https://clcss.dcmsme.gov.in',
+      status: 'Open'
+    },
+    {
+      id: 18,
+      name: 'Dairy Processing Infrastructure Development Fund (DIDF)',
+      type: 'Government',
+      amount: 'Infrastructure support',
+      deadline: 'Annual',
+      logo: '🥛',
+      description: 'Grants for dairy processing units and supply chain infrastructure',
+      eligibility: 'Dairy processing units and cooperatives',
+      process: 'Project proposal → Technical evaluation → Financial approval → Implementation',
+      website: 'https://lnkd.in/dyDH3mWn',
+      status: 'Open'
+    },
+    {
+      id: 19,
+      name: 'TDB Grants',
+      type: 'Government',
+      amount: 'Variable',
+      deadline: 'Rolling basis',
+      logo: '🔬',
+      description: 'Grants for tech development and commercialization',
+      eligibility: 'Technology-based startups and researchers',
+      process: 'Proposal submission → Technical review → Commercialization support → Funding',
+      website: 'https://tdb.gov.in/modes-funding',
+      status: 'Open'
+    },
+    {
+      id: 20,
+      name: 'NSIC Subsidy',
+      type: 'Government',
+      amount: 'Support services',
+      deadline: 'Rolling basis',
+      logo: '🏢',
+      description: 'Marketing, finance, and tech support for MSMEs',
+      eligibility: 'Micro, Small & Medium Enterprises',
+      process: 'Registration → Service selection → Application → Support delivery',
+      website: 'https://nsic.co.in',
+      status: 'Open'
+    }
   ];
 
   const filteredGrants = grants.filter(grant => {
-    const matchesType = selectedType === 'all' || grant.type === selectedType;
     const matchesSearch = grant.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          grant.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesType && matchesSearch;
+    return matchesSearch;
   });
 
   const getStatusColor = (status) => {
@@ -126,9 +299,9 @@ const Grants = () => {
             <h1 className="text-5xl font-heading font-bold text-foreground mb-4">Funding Opportunities</h1>
             <p className="text-xl text-muted-foreground mb-8">Discover grants and funding options for your startup journey</p>
             
-            {/* Search and Filter */}
-            <div className="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
-              <div className="relative flex-1">
+            {/* Search */}
+            <div className="flex justify-center">
+              <div className="relative max-w-md w-full">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" size={20} />
                 <input
                   type="text"
@@ -137,21 +310,6 @@ const Grants = () => {
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-card/50 backdrop-blur-sm border border-border rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-prajvalan-orange transition-all duration-300"
                 />
-              </div>
-              <div className="relative">
-                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground z-10" size={20} />
-                <Select value={selectedType} onValueChange={setSelectedType}>
-                  <SelectTrigger className="pl-10 pr-4 py-3 bg-card/50 backdrop-blur-sm border border-border rounded-xl text-foreground focus:outline-none focus:ring-2 focus:ring-prajvalan-orange transition-all duration-300 min-w-[200px]">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent className="bg-card/95 backdrop-blur-sm border-border">
-                    {types.map(type => (
-                      <SelectItem key={type.id} value={type.id} className="text-foreground hover:bg-accent focus:bg-accent">
-                        {type.name}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
               </div>
             </div>
           </div>

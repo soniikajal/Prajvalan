@@ -95,9 +95,7 @@ const Footer = () => {
             <a href="https://www.termsfeed.com/live/402267b1-d788-4989-8548-5b9ccd1517b2" className="text-muted-foreground hover:text-prajvalan-orange text-sm transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-muted-foreground hover:text-prajvalan-orange text-sm transition-colors">
-              Terms of Service
-            </a>
+            
             <a href="https://www.freeprivacypolicy.com/live/e9771de4-61a0-4651-9179-22f048352fc1" className="text-muted-foreground hover:text-prajvalan-orange text-sm transition-colors">
               Cookie Policy
             </a>

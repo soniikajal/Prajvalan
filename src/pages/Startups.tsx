@@ -28,7 +28,7 @@ const Startups = () => {
       founder: 'Gaurav',
       tagline: 'Next-gen clothing brand that merges physical fashion with immersive tech like AR and VR.',
       logo: '🌉',
-      category: 'Tech and Faishon',
+      category: 'Tech',
       description: 'AI-powered platform matching students with industry professionals for personalized mentorship.',
       vision: 'Bridging the gap between academic learning and industry requirements through meaningful connections.',
       journey: 'Launched during lockdown, helped 10,000+ students connect with mentors.',
@@ -78,9 +78,9 @@ const Startups = () => {
 
   const categories = [
     { id: 'all', name: 'All Startups' },
-    { id: 'tech', name: 'Technology' },
-    { id: 'product', name: 'Product-based' },
-    { id: 'service', name: 'Service-based' },
+    { id: 'Tech', name: 'Technology' },
+    { id: 'Product', name: 'Product-based' },
+    { id: 'Service', name: 'Service-based' },
   ];
 
   const filteredStartups = startups.filter(startup => {

@@ -71,9 +71,9 @@ const WhyUs = () => {
 
   const achievements = [
     { number: '1000+', label: 'Students Mentored' },
-    { number: '300+', label: 'Startups Launched' },
-    { number: '₹50Cr+', label: 'Funding Facilitated' },
-    { number: '15+', label: 'Cities Covered' },
+    { number: '5+', label: 'Startups Launched' },
+    { number: '₹3 L+', label: 'Funding Facilitated' },
+    { number: '10+', label: 'Cities Covered' },
   ];
 
   return (

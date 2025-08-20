@@ -45,9 +45,14 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <button className="bg-gradient-to-r from-prajvalan-navy to-prajvalan-orange text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transition-shadow duration-200">
+            <a
+              href="https://linktr.ee/prajvalan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-prajvalan-navy to-prajvalan-orange text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transition-shadow duration-200"
+            >
               Join Us
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -78,9 +83,14 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <button className="mt-2 w-full bg-gradient-to-r from-prajvalan-navy to-prajvalan-orange text-white px-6 py-2 rounded-full font-medium">
+            <a
+              href="https://linktr.ee/prajvalan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 w-full bg-gradient-to-r from-prajvalan-navy to-prajvalan-orange text-white px-6 py-2 rounded-full font-medium text-center block"
+            >
               Join Us
-            </button>
+            </a>
           </div>
         )}
       </div>
