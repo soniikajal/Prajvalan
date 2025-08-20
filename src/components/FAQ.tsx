@@ -1,10 +1,13 @@
 
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import React from 'react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   const faqs = [
     {
       question: 'Who can join Prajvalan?',
@@ -40,10 +43,6 @@ const FAQ = () => {
     }
   ];
 
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <section className="py-16 bg-gradient-to-br from-background via-prajvalan-dark-navy/20 to-background relative overflow-hidden">
       {/* Animated background elements */}
@@ -58,53 +57,30 @@ const FAQ = () => {
           <p className="text-xl text-muted-foreground">Everything you need to know about joining Prajvalan</p>
         </div>
 
-        <div className="space-y-4">
+        <Accordion type="single" collapsible className="space-y-4">
           {faqs.map((faq, index) => (
-            <div 
+            <AccordionItem 
               key={index} 
-              className="border border-border rounded-xl overflow-hidden bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 group"
-              style={{
-                boxShadow: openIndex === index ? '0 10px 30px rgba(255, 120, 0, 0.2)' : 'none',
-              }}
+              value={`item-${index}`}
+              className="border border-border rounded-xl bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 group px-6 py-2"
             >
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent/50 transition-all duration-200 group-hover:bg-accent/30"
-              >
-                <span className="text-lg font-heading font-semibold text-foreground group-hover:text-prajvalan-orange transition-colors duration-300">
-                  {faq.question}
-                </span>
-                <div className="flex-shrink-0 transform transition-transform duration-300 group-hover:scale-110">
-                  {openIndex === index ? (
-                    <ChevronUp className="text-prajvalan-orange animate-pulse" size={20} />
-                  ) : (
-                    <ChevronDown className="text-muted-foreground group-hover:text-prajvalan-orange transition-colors duration-300" size={20} />
-                  )}
-                </div>
-              </button>
-              {openIndex === index && (
-                <div className="px-6 pb-4 pt-0">
-                  <div className="border-t border-prajvalan-orange/20 pt-4">
-                    <p className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300">
-                      {faq.answer}
-                    </p>
-                  </div>
-                </div>
-              )}
-
-              {/* Hover effect border */}
-              <div className="absolute inset-0 border-2 border-transparent group-hover:border-prajvalan-orange/30 rounded-xl transition-all duration-300"></div>
-            </div>
+              <AccordionTrigger className="text-lg font-heading font-semibold text-foreground group-hover:text-prajvalan-orange transition-colors duration-300 hover:no-underline">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300 border-t border-prajvalan-orange/20 pt-4">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </div>
+        </Accordion>
 
         <div className="text-center mt-12 transform hover:scale-105 transition-transform duration-300">
           <p className="text-muted-foreground mb-4">Still have questions?</p>
           <a href="https://chat.whatsapp.com/LIHXPUSBEfuH7tSKEWnYZk" target="_blank" rel="noopener noreferrer" className="inline-block">
-          <button className="bg-gradient-to-r from-prajvalan-navy to-prajvalan-orange text-white px-8 py-3 rounded-full font-medium hover:shadow-xl hover:scale-110 transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden group">
-            <span className="relative z-10">Contact Us</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-prajvalan-orange to-prajvalan-bright-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </button>
+            <button className="bg-gradient-to-r from-prajvalan-navy to-prajvalan-orange text-white px-8 py-3 rounded-full font-medium hover:shadow-xl hover:scale-110 transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden group">
+              <span className="relative z-10">Contact Us</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-prajvalan-orange to-prajvalan-bright-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </button>
           </a>
         </div>
       </div>
